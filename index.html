@@ -6,10 +6,10 @@
     <title>المعراج ہیلتھ کیئر ہومیو کلینک - Al-Miraj Clinic</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for premium Urdu and English typography -->
+    <!-- Google Fonts for Premium Nastaliq and Inter Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -17,12 +17,12 @@
                 extend: {
                     colors: {
                         clinic: {
-                            950: '#0f172a', // Ultra Dark Navy
+                            950: '#0b132b', // Premium Midnight Navy
                             900: '#1e3a8a', // Deep Navy Blue
                             800: '#1e40af', // Royal Blue
-                            600: '#2563eb', // Light Royal Blue
-                            500: '#3b82f6', // Premium Accent Blue
-                            50: '#f0fdf4',  // Light tint
+                            600: '#2563eb', // Active Blue
+                            500: '#3b82f6', // Accent Blue
+                            50: '#f8fafc', 
                         }
                     },
                     fontFamily: {
@@ -34,41 +34,38 @@
         }
     </script>
     <style>
-        .urdu-text {
-            font-family: 'Noto Nastaliq Urdu', serif;
-            line-height: 2.3;
-        }
         .urdu-heading {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 2.4;
+            letter-spacing: 0px;
+        }
+        .urdu-text {
             font-family: 'Noto Nastaliq Urdu', serif;
             line-height: 2.2;
         }
-        /* Pulse Animation for CTA Buttons */
         @keyframes pulse-ring {
-            0% { transform: scale(0.95); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
-            100% { transform: scale(0.95); opacity: 1; }
+            0% { transform: scale(0.97); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.9; }
+            100% { transform: scale(0.97); opacity: 1; }
         }
         .pulse-btn {
-            animation: pulse-ring 2s infinite ease-in-out;
+            animation: pulse-ring 2.5s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-clinic-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-clinic-500 selection:text-white">
 
     <!-- 1. STICKY NAVBAR -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Brand Names -->
                 <div class="flex flex-col items-start justify-center">
-                    <span id="nav-brand-urdu" class="urdu-heading text-lg sm:text-2xl font-bold text-clinic-900 tracking-wide leading-none">المعراج ہیلتھ کیئر ہومیو کلینک</span>
-                    <span id="nav-brand-eng" class="text-xs sm:text-sm font-semibold tracking-wider text-gray-500 uppercase mt-1">Al-Miraj Clinic & Pharmacy</span>
+                    <span id="nav-brand-urdu" class="urdu-heading text-xl sm:text-2xl font-bold text-clinic-900 leading-none">المعراج ہیلتھ کیئر ہومیو کلینک</span>
+                    <span id="nav-brand-eng" class="text-[11px] sm:text-xs font-bold tracking-widest text-slate-400 uppercase mt-1">Al-Miraj Clinic & Pharmacy</span>
                 </div>
-                
-                <!-- Call Emergency Button (Dr. Babar's Number) -->
-                <div class="flex items-center space-x-reverse space-x-3">
-                    <a id="nav-emergency-btn" href="tel:03436497295" class="pulse-btn inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-4 sm:px-5 rounded-full shadow-lg transition duration-300 text-sm sm:text-base">
-                        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div>
+                    <a id="nav-emergency-btn" href="tel:03436497295" class="pulse-btn inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 sm:px-5 rounded-full shadow-md text-sm transition">
+                        <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
                         <span>ایمرجنسی کال</span>
@@ -78,64 +75,53 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (With Real Signboard Image Background & Premium Overlay) -->
-    <section id="hero-section" class="relative bg-cover bg-center text-white overflow-hidden py-16 lg:py-24 bg-clinic-900" style="background-image: url('signboard.jpg');">
-        <!-- Semi-transparent overlay to ensure extreme contrast and high readability -->
-        <div class="absolute inset-0 bg-gradient-to-br from-clinic-950/95 via-clinic-900/90 to-black/85 z-0"></div>
+    <!-- 2. HERO SECTION -->
+    <section id="hero-section" class="relative bg-slate-900 text-white overflow-hidden py-16 lg:py-24 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80');">
+        <div class="absolute inset-0 bg-gradient-to-br from-clinic-950/95 via-clinic-900/90 to-slate-950/95 z-0"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Left Column (Content) -->
                 <div class="lg:col-span-7 text-center lg:text-right space-y-6">
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-4">
-                        <span id="hero-nhc" class="inline-flex items-center gap-1.5 bg-green-500/30 text-green-300 border border-green-500/40 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                        <span id="hero-nhc" class="inline-flex items-center bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full text-xs font-bold tracking-wide">
                             NHC Reg # 154876
                         </span>
-                        <span id="hero-phc" class="inline-flex items-center gap-1.5 bg-blue-500/30 text-blue-300 border border-blue-500/40 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
+                        <span id="hero-phc" class="inline-flex items-center bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-bold tracking-wide">
                             PHC Reg # 83263
                         </span>
                     </div>
 
-                    <h1 id="hero-title" class="urdu-heading text-4xl sm:text-6xl font-extrabold text-white leading-snug drop-shadow-md">
+                    <h1 id="hero-title" class="urdu-heading text-4xl sm:text-6xl font-extrabold text-white drop-shadow-md">
                         المعراج ہیلتھ کیئر ہومیو کلینک
                     </h1>
                     
-                    <p id="hero-location" class="urdu-text text-xl sm:text-2xl text-blue-100 font-semibold mt-2">
+                    <p id="hero-location" class="urdu-text text-xl sm:text-2xl text-blue-200 font-bold">
                         حُسین چوک، 26 روڈ، 90 موڑ، ضلع ساہیوال
                     </p>
                     
-                    <p id="hero-desc" class="text-base sm:text-lg text-blue-200 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    <p id="hero-desc" class="text-slate-300 text-base sm:text-lg font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                         جدید ہومیو پیتھک علاج اور بنیادی طبی سہولیات کا قابلِ اعتماد مرکز۔ اب آپ کے اپنے علاقے میں بہترین اور مستند معالجین چوبیس گھنٹے آپ کی خدمت کے لیے حاضر ہیں۔
                     </p>
 
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <!-- WhatsApp Button (Dr. Babar's Number) -->
-                        <a id="hero-wa-btn" href="https://wa.me/923436497295" class="pulse-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-extrabold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-green-500/30 transition duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.453L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.451 5.486.002 9.948-4.452 9.95-9.932.002-2.654-1.02-5.152-2.877-7.014-1.856-1.862-4.322-2.887-6.977-2.888-5.49-.001-9.953 4.453-9.956 9.934-.001 1.666.425 3.293 1.235 4.743L1.69 22.314l4.957-1.16zM17.477 14.332c-.3-.149-1.777-.877-2.043-.974-.265-.096-.459-.143-.652.148-.194.291-.747.974-.916 1.169-.168.194-.337.219-.637.07-1.161-.58-1.932-.972-2.697-2.285-.201-.345.201-.321.575-1.071.063-.129.031-.242-.015-.341-.047-.1-.459-1.106-.63-1.516-.165-.399-.335-.344-.459-.351-.119-.007-.256-.008-.393-.008-.137 0-.361.051-.549.256-.188.205-.717.7-.717 1.707s.731 1.979.833 2.116c.101.137 1.44 2.2 3.491 3.084.488.21 1.134.417 1.547.472.482.064.921.011 1.267-.04.386-.057 1.177-.48 1.343-.944.166-.465.166-.864.117-.948-.049-.084-.18-.133-.48-.282z"/>
-                            </svg>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a id="hero-wa-btn" href="https://wa.me/923436497295" class="pulse-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-lg py-3.5 px-8 rounded-xl shadow-lg transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.453L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.451 5.486.002 9.948-4.452 9.95-9.932.002-2.654-1.02-5.152-2.877-7.014-1.856-1.862-4.322-2.887-6.977-2.888-5.49-.001-9.953 4.453-9.956 9.934-.001 1.666.425 3.293 1.235 4.743L1.69 22.314l4.957-1.16zM17.477 14.332c-.3-.149-1.777-.877-2.043-.974-.265-.096-.459-.143-.652.148-.194.291-.747.974-.916 1.169-.168.194-.337.219-.637.07-1.161-.58-1.932-.972-2.697-2.285-.201-.345.201-.321.575-1.071.063-.129.031-.242-.015-.341-.047-.1-.459-1.106-.63-1.516-.165-.399-.335-.344-.459-.351-.119-.007-.256-.008-.393-.008-.137 0-.361.051-.549.256-.188.205-.717.7-.717 1.707s.731 1.979.833 2.116c.101.137 1.44 2.2 3.491 3.084.488.21 1.134.417 1.547.472.482.064.921.011 1.267-.04.386-.057 1.177-.48 1.343-.944.166-.465.166-.864.117-.948-.049-.084-.18-.133-.48-.282z"/></svg>
                             <span>واٹس ایپ پر رابطہ کریں</span>
                         </a>
-
-                        <!-- Direct Call Button (Dr. Babar's Number) -->
-                        <a id="hero-call-btn" href="tel:03436497295" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-clinic-900 font-extrabold text-lg py-4 px-8 rounded-xl shadow-md transition duration-300">
-                            <svg class="w-6 h-6 text-clinic-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
+                        <a id="hero-call-btn" href="tel:03436497295" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-clinic-900 font-extrabold text-lg py-3.5 px-8 rounded-xl shadow-md transition">
+                            <svg class="w-5 h-5 text-clinic-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             <span>براہ راست فون کریں</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Column (Doctor Image Container) -->
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-72 h-72 sm:w-96 sm:h-96">
-                        <div class="absolute inset-0 bg-blue-500 rounded-2xl rotate-6 opacity-30 blur-lg"></div>
-                        <div class="relative w-full h-full bg-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80">
+                        <div class="absolute inset-0 bg-blue-500 rounded-2xl rotate-6 opacity-20 blur-md"></div>
+                        <div class="relative w-full h-full bg-white rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                             <img id="hero-doc-img" src="doctor.jpg" alt="Dr. Babar Hussain Malik" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80';" class="w-full h-full object-cover object-top">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-center">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 text-center">
                                 <p id="hero-doc-label-name" class="text-white font-bold text-lg">ڈاکٹر بابر حسین ملک</p>
                                 <p id="hero-doc-label-qual" class="text-blue-300 text-xs font-semibold">DHMS (Punjab) | RHMP (Pakistan)</p>
                             </div>
@@ -148,226 +134,159 @@
     </section>
 
     <!-- 3. MEDICAL TEAM SECTION -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="urdu-heading text-3xl sm:text-4xl font-extrabold text-clinic-900 leading-normal">
-                    ہماری ماہر طبی ٹیم
-                </h2>
-                <div class="w-24 h-1.5 bg-clinic-600 mx-auto rounded-full mt-2"></div>
-                <p class="text-gray-500 font-semibold text-base sm:text-lg mt-4">
-                    مستند اور تجربہ کار معالجین جو چوبیس گھنٹے آپ کی بہتر صحت کے لیے کوشاں ہیں۔
-                </p>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="urdu-heading text-3xl sm:text-4xl font-extrabold text-clinic-900">ہمارے تجربہ کار معالجین</h2>
+                <div class="w-16 h-1 bg-clinic-600 mx-auto rounded-full mt-1"></div>
             </div>
 
-            <!-- Team Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Doctor Card -->
-                <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-lg hover:shadow-xl hover:border-clinic-500/20 transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-md border-4 border-white mb-6">
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition flex flex-col items-center text-center">
+                    <div class="w-36 h-36 rounded-full overflow-hidden shadow border-4 border-white mb-4">
                         <img id="team-doc-img" src="doctor.jpg" alt="Dr. Babar Hussain Malik" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80';" class="w-full h-full object-cover object-top">
                     </div>
-                    <span class="bg-blue-100 text-clinic-900 font-extrabold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-2">
-                        ہومیو پیتھک فزیشن
-                    </span>
-                    <h3 id="team-doc-name" class="urdu-heading text-2xl sm:text-3xl font-extrabold text-clinic-900">
-                        ڈاکٹر بابر حسین ملک
-                    </h3>
-                    <p id="team-doc-qual" class="text-gray-600 font-bold text-sm sm:text-base mt-2">
-                        DHMS (Punjab) | RHMP (Pakistan)
-                    </p>
-                    <p class="text-gray-500 font-medium text-sm mt-1">
-                        رجسٹرڈ ہومیو پیتھک میڈیکل پریکٹیشنر
-                    </p>
-                    <div class="w-full border-t border-gray-200/60 my-5"></div>
-                    <a id="team-doc-phone-link" href="tel:03436497295" class="inline-flex items-center gap-2 text-clinic-900 hover:text-clinic-600 font-extrabold text-base transition">
-                        <svg class="w-5 h-5 text-clinic-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                        <span id="team-doc-phone">0343-6497295</span>
+                    <span class="bg-blue-100 text-clinic-900 font-bold text-xs px-3 py-1 rounded-full mb-2">ہومیو پیتھک فزیشن</span>
+                    <h3 id="team-doc-name" class="urdu-heading text-2xl font-bold text-clinic-900">ڈاکٹر بابر حسین ملک</h3>
+                    <p id="team-doc-qual" class="text-slate-600 font-bold text-sm mt-1">DHMS (Punjab) | RHMP (Pakistan)</p>
+                    <div class="w-full border-t border-slate-200 my-4"></div>
+                    <a id="team-doc-phone-link" href="tel:03436497295" class="inline-flex items-center gap-2 text-clinic-900 font-extrabold tracking-wide hover:text-clinic-600">
+                        <svg class="w-4 h-4 text-clinic-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        <span>0343-6497295</span>
                     </a>
                 </div>
 
                 <!-- Dispenser/Technician Card -->
-                <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-lg hover:shadow-xl hover:border-clinic-500/20 transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-md border-4 border-white mb-6">
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition flex flex-col items-center text-center">
+                    <div class="w-36 h-36 rounded-full overflow-hidden shadow border-4 border-white mb-4">
                         <img id="team-tech-img" src="technician.jpg" alt="Malik Muhammad Adnan Ghouri" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&w=600&q=80';" class="w-full h-full object-cover object-top">
                     </div>
-                    <span id="team-tech-badge" class="bg-green-100 text-green-800 font-extrabold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-2">
-                        پبلک ہیلتھ ٹیکنیشن / ڈسپنسر
-                    </span>
-                    <h3 id="team-tech-name" class="urdu-heading text-2xl sm:text-3xl font-extrabold text-clinic-900">
-                        ملک محمد عدنان غوری
-                    </h3>
-                    <p id="team-tech-title" class="text-gray-600 font-bold text-sm sm:text-base mt-2">
-                        Certified Public Health Technician
-                    </p>
-                    <p id="team-tech-desc" class="text-gray-500 font-medium text-sm mt-1">
-                        میڈیکل ڈسپنسر اور فرسٹ Aid ایکسپرٹ
-                    </p>
-                    <div class="w-full border-t border-gray-200/60 my-5"></div>
-                    <a id="team-tech-phone-link" href="tel:03004495095" class="inline-flex items-center gap-2 text-clinic-900 hover:text-clinic-600 font-extrabold text-base transition">
-                        <svg class="w-5 h-5 text-clinic-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                        <span id="team-tech-phone">0300-4495095</span>
+                    <span id="team-tech-badge" class="bg-emerald-100 text-emerald-800 font-bold text-xs px-3 py-1 rounded-full mb-2">پبلک ہیلتھ ٹیکنیشن / ڈسپنسر</span>
+                    <h3 id="team-tech-name" class="urdu-heading text-2xl font-bold text-clinic-900">ملک محمد عدنان غوری</h3>
+                    <p id="team-tech-title" class="text-slate-600 font-bold text-sm mt-1">Certified Public Health Technician</p>
+                    <p id="team-tech-desc" class="text-slate-500 font-semibold text-xs mt-1">میڈیکل ڈسپنسر اور فرسٹ Aid ایکسپرٹ</p>
+                    <div class="w-full border-t border-slate-200 my-4"></div>
+                    <a id="team-tech-phone-link" href="tel:03004495095" class="inline-flex items-center gap-2 text-clinic-900 font-extrabold tracking-wide hover:text-clinic-600">
+                        <svg class="w-4 h-4 text-clinic-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        <span>0300-4495095</span>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- 4. REAL CLINIC GALLERY SECTION -->
-    <section class="py-20 bg-gray-50 border-t border-b border-gray-100">
+    <section class="py-16 bg-slate-50 border-t border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Gallery Image -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-6">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white bg-white">
-                        <img id="gallery-clinic-img" src="clinic.jpg" alt="Al-Miraj Pharmacy Counter" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1607619056574-7b8d304a2723?auto=format&fit=crop&w=800&q=80';" class="w-full h-[400px] object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+                        <img id="gallery-clinic-img" src="clinic.jpg" alt="Al-Miraj Pharmacy Counter" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1607619056574-7b8d304a2723?auto=format&fit=crop&w=800&q=80';" class="w-full h-80 object-cover">
                     </div>
                 </div>
-
-                <!-- Gallery Content -->
-                <div class="lg:col-span-6 text-right space-y-6">
-                    <h2 class="urdu-heading text-3xl sm:text-4xl font-extrabold text-clinic-900 leading-normal">
-                        ہمارا کلینک اور فارمیسی
-                    </h2>
-                    <div class="w-24 h-1.5 bg-clinic-600 mr-0 ml-auto rounded-full mt-2"></div>
-                    
-                    <p id="gallery-clinic-desc" class="urdu-text text-lg text-gray-700 leading-relaxed font-semibold">
+                <div class="lg:col-span-6 text-right space-y-4">
+                    <h2 class="urdu-heading text-3xl font-extrabold text-clinic-900">ہمارا کلینک اور فارمیسی</h2>
+                    <p id="gallery-clinic-desc" class="urdu-text text-base text-slate-600 font-semibold">
                         المعراج ہیلتھ کیئر ہومیو کلینک پر مستند اور اعلیٰ معیار کی ہومیو پیتھک ادویات دستیاب ہیں۔ ہماری دوا ساز فارمیسی میں حفظانِ صحت کے اصولوں کے مطابق ادویات محفوظ کی جاتی ہیں۔
                     </p>
-
-                    <!-- Feature bullets -->
-                    <ul class="space-y-4 pt-2">
-                        <li class="flex items-start gap-3 justify-start">
-                            <span class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-clinic-900 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            </span>
-                            <span class="urdu-text text-base text-gray-700 font-semibold leading-none">مستند ہومیو پیتھک اور الیکٹرو ہومیو میڈیسن</span>
-                        </li>
-                        <li class="flex items-start gap-3 justify-start">
-                            <span class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-clinic-900 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            </span>
-                            <span class="urdu-text text-base text-gray-700 font-semibold leading-none">فوری اور بہترین فارماسیوٹیکل سروسز</span>
-                        </li>
-                        <li class="flex items-start gap-3 justify-start">
-                            <span class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-clinic-900 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            </span>
-                            <span class="urdu-text text-base text-gray-700 font-semibold leading-none">محفوظ اور معیاری طبی اجزاء</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 5. VISUAL SERVICES SECTION -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="urdu-heading text-3xl sm:text-4xl font-extrabold text-clinic-900 leading-normal">
-                    طبی سہولیات اور سروسز
-                </h2>
-                <div class="w-24 h-1.5 bg-clinic-600 mx-auto rounded-full mt-2"></div>
-                <p class="text-gray-500 font-semibold text-base sm:text-lg mt-4">
-                    جدید خطوط پر ہر عمر کے مریضوں کے لیے بہترین علاج اور تشخیصی سہولیات۔
-                </p>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="urdu-heading text-3xl sm:text-4xl font-extrabold text-clinic-900">طبی سہولیات اور سروسز</h2>
+                <div class="w-16 h-1 bg-clinic-600 mx-auto rounded-full mt-1"></div>
             </div>
 
-            <!-- Services Grid -->
+            <!-- Services Grid with Perfect High-Quality Diagnostic Imagery -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Service 1: Blood Pressure Check-up -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img id="service1-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Blood Pressure Checkup" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img id="service1-img" src="https://images.unsplash.com/photo-1542884748-2b87b36c6bed?auto=format&fit=crop&w=600&q=80" alt="Blood Pressure Checkup" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-6 text-right flex-grow flex flex-col justify-between">
+                    <div class="p-5 text-right flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 id="service1-title" class="urdu-heading text-2xl font-bold text-clinic-900 mb-2">بلڈ پریشر چیک اپ</h3>
-                            <p id="service1-desc" class="text-gray-600 text-sm font-semibold leading-relaxed">بلڈ پریشر کی باقاعدہ جانچ اور کنٹرول کے لیے بہترین مشاورت فراہم کی جاتی ہے۔</p>
+                            <h3 id="service1-title" class="urdu-heading text-xl font-bold text-clinic-900">بلڈ پریشر چیک اپ</h3>
+                            <p id="service1-desc" class="text-slate-500 text-xs font-bold leading-relaxed mt-1">بلڈ پریشر کی باقاعدہ اور درست ڈیجیٹل جانچ کی سہولت۔</p>
                         </div>
-                        <span class="inline-block self-end text-clinic-500 font-bold text-sm mt-4">Blood Pressure Check-up &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Service 2: Sugar Testing -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img id="service2-img" src="https://images.unsplash.com/photo-1615486511487-12f36c69c58e?auto=format&fit=crop&w=600&q=80" alt="Sugar Test" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img id="service2-img" src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80" alt="Sugar Test" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-6 text-right flex-grow flex flex-col justify-between">
+                    <div class="p-5 text-right flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 id="service2-title" class="urdu-heading text-2xl font-bold text-clinic-900 mb-2">شوگر ٹیسٹ</h3>
-                            <p id="service2-desc" class="text-gray-600 text-sm font-semibold leading-relaxed">جدید گلوکومیٹر سے فوری اور سوفیصد درست شوگر ٹیسٹ اور کنٹرول کا علاج۔</p>
+                            <h3 id="service2-title" class="urdu-heading text-xl font-bold text-clinic-900">شوگر ٹیسٹ</h3>
+                            <p id="service2-desc" class="text-slate-500 text-xs font-bold leading-relaxed mt-1">جدید گلوکومیٹر سے فوری اور 100% درست بلڈ شوگر رپورٹ۔</p>
                         </div>
-                        <span class="inline-block self-end text-clinic-500 font-bold text-sm mt-4">Diabetes & Sugar Testing &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Service 3: Ultrasound Service -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img id="service3-img" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Ultrasound" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img id="service3-img" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Ultrasound Scan Machine" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-6 text-right flex-grow flex flex-col justify-between">
+                    <div class="p-5 text-right flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 id="service3-title" class="urdu-heading text-2xl font-bold text-clinic-900 mb-2">الٹراساؤنڈ کی سہولت</h3>
-                            <p id="service3-desc" class="text-gray-600 text-sm font-semibold leading-relaxed">مختلف اندرونی امراض کی فوری تشخیص کے لیے جدید الٹراساؤنڈ کی سہولت۔</p>
+                            <h3 id="service3-title" class="urdu-heading text-xl font-bold text-clinic-900">الٹراساؤنڈ کی سہولت</h3>
+                            <p id="service3-desc" class="text-slate-500 text-xs font-bold leading-relaxed mt-1">اندرونی امراض اور مانیٹرنگ کے لیے جدید کلینکل الٹراساؤنڈ اسکینیگ۔</p>
                         </div>
-                        <span class="inline-block self-end text-clinic-500 font-bold text-sm mt-4">Ultrasound Service &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Service 4: Drips & Injections -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img id="service4-img" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Drips and Injections" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img id="service4-img" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="IV Drips and Injections" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-6 text-right flex-grow flex flex-col justify-between">
+                    <div class="p-5 text-right flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 id="service4-title" class="urdu-heading text-2xl font-bold text-clinic-900 mb-2">ڈرپ اور انجکشن</h3>
-                            <p id="service4-desc" class="text-gray-600 text-sm font-semibold leading-relaxed">انتہائی احتیاط اور ماہر پبلک ہیلتھ ٹیکنیشن کی نگرانی میں ڈرپ اور انجکشن لگانے کی سہولت۔</p>
+                            <h3 id="service4-title" class="urdu-heading text-xl font-bold text-clinic-900">ڈرپ اور انجکشن</h3>
+                            <p id="service4-desc" class="text-slate-500 text-xs font-bold leading-relaxed mt-1">ماہر ٹیکنیشن کی زیرِ نگرانی جراثیم سے پاک ماحول میں ڈرپ اور انجکشن کی سہولت۔</p>
                         </div>
-                        <span class="inline-block self-end text-clinic-500 font-bold text-sm mt-4">IV Drips & Injections &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Service 5: Pediatric Care -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img id="service5-img" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Pediatric Care" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img id="service5-img" src="https://images.unsplash.com/photo-1606166325683-e6deb697d301?auto=format&fit=crop&w=600&q=80" alt="Pediatric Child Checkup" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-6 text-right flex-grow flex flex-col justify-between">
+                    <div class="p-5 text-right flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 id="service5-title" class="urdu-heading text-2xl font-bold text-clinic-900 mb-2">بچوں کا علاج</h3>
-                            <p id="service5-desc" class="text-gray-600 text-sm font-semibold leading-relaxed">بچوں کے تمام موسمی، وبائی اور دائمی امراض کا ہومیو پیتھک ادویات سے بے ضرر علاج۔</p>
+                            <h3 id="service5-title" class="urdu-heading text-xl font-bold text-clinic-900">بچوں کا علاج</h3>
+                            <p id="service5-desc" class="text-slate-500 text-xs font-bold leading-relaxed mt-1">بچوں کے تمام وبائی، موسمی اور پیچیدہ امراض کا بہترین شافی علاج۔</p>
                         </div>
-                        <span class="inline-block self-end text-clinic-500 font-bold text-sm mt-4">Pediatric & Child Care &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Service 6: Wound Dressing -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img id="service6-img" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Wound Care" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col">
+                    <div class="h-44 overflow-hidden relative">
+                        <img id="service6-img" src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=600&q=80" alt="First Aid Wound Bandage Care" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-6 text-right flex-grow flex flex-col justify-between">
+                    <div class="p-5 text-right flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 id="service6-title" class="urdu-heading text-2xl font-bold text-clinic-900 mb-2">زخموں کی پٹی اور ڈریسنگ</h3>
-                            <p id="service6-desc" class="text-gray-600 text-sm font-semibold leading-relaxed">حادثاتی یا پرانے زخموں، شوگر کے زخموں کی باقاعدہ پٹی اور جراثیم سے پاک فرسٹ ایڈ ڈریسنگ۔</p>
+                            <h3 id="service6-title" class="urdu-heading text-xl font-bold text-clinic-900">زخموں کی پٹی اور ڈریسنگ</h3>
+                            <p id="service6-desc" class="text-slate-500 text-xs font-bold leading-relaxed mt-1">حادثاتی یا شوگر کے پرانے زخموں کی جراثیم کش طریقے سے روزانہ پٹی۔</p>
                         </div>
-                        <span class="inline-block self-end text-clinic-500 font-bold text-sm mt-4">Wound Care & Dressing &rarr;</span>
                     </div>
                 </div>
 
@@ -376,33 +295,19 @@
     </section>
 
     <!-- 6. FEATURED CALLOUT: HOME VISIT SERVICE -->
-    <section class="bg-gradient-to-r from-red-600 to-red-700 text-white py-16 relative overflow-hidden">
-        <!-- Accent circles -->
-        <div class="absolute right-0 bottom-0 w-80 h-80 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
-        <div class="absolute left-0 top-0 w-80 h-80 bg-white/5 rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-            <span class="inline-flex items-center gap-1 bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase">
-                خصوصی سہولت
-            </span>
-            <h2 class="urdu-heading text-3xl sm:text-5xl font-extrabold text-white leading-normal">
-                گھر پر علاج کی سہولت (Home Visit)
-            </h2>
-            <p id="home-visit-desc" class="urdu-text text-lg sm:text-2xl text-red-100 font-semibold leading-relaxed max-w-3xl mx-auto">
+    <section class="bg-gradient-to-r from-red-600 to-red-700 text-white py-14 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
+            <span class="inline-flex items-center bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">خصوصی سروس</span>
+            <h2 class="urdu-heading text-3xl sm:text-4xl font-extrabold text-white">گھر پر علاج کی سہولت (Home Visit)</h2>
+            <p id="home-visit-desc" class="urdu-text text-lg text-red-500 font-bold max-w-2xl mx-auto">
                 اگر مریض کلینک پر تشریف نہیں لا سکتے، تو ڈاکٹر بابر حسین ملک یا ملک محمد عدنان غوری گھر پر آ کر ایمرجنسی چیک اپ، ڈرپ، اور انجکشن لگانے کی سہولت فراہم کرتے ہیں۔
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a id="home-visit-babar-link" href="tel:03436497295" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-red-700 hover:bg-gray-100 font-extrabold text-lg py-4 px-8 rounded-xl shadow-lg transition duration-300">
-                    <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                    </svg>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-2">
+                <a id="home-visit-babar-link" href="tel:03436497295" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-red-700 font-extrabold py-3 px-6 rounded-xl shadow transition">
                     <span>ڈاکٹر بابر: <span id="home-visit-babar-text">0343-6497295</span></span>
                 </a>
-                <a id="home-visit-adnan-link" href="tel:03004495095" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-red-800 text-white hover:bg-red-900 font-extrabold text-lg py-4 px-8 rounded-xl border border-white/20 shadow-lg transition duration-300">
-                    <svg class="w-6 h-6 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                    </svg>
+                <a id="home-visit-adnan-link" href="tel:03004495095" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-red-800 text-white font-extrabold py-3 px-6 rounded-xl border border-white/20 shadow transition">
                     <span>ملک عدنان: <span id="home-visit-adnan-text">0300-4495095</span></span>
                 </a>
             </div>
@@ -410,46 +315,25 @@
     </section>
 
     <!-- 7. LOCATION, TIMINGS & FOOTER -->
-    <footer class="bg-clinic-900 text-gray-200 pt-16 pb-8 border-t border-clinic-800">
+    <footer class="bg-clinic-900 text-slate-300 pt-12 pb-6 border-t border-clinic-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pb-12 border-b border-clinic-800">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-8 border-b border-clinic-800">
                 
-                <!-- Timings Display (Left Column) -->
-                <div class="text-right space-y-6">
-                    <h3 class="urdu-heading text-2xl font-bold text-white border-b-2 border-clinic-600 pb-2">
-                        کلینک کے اوقات کار (Timings)
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center bg-clinic-800/40 p-4 rounded-xl border border-clinic-800">
-                            <span id="footer-timings-hours" class="font-bold text-blue-200">صبح 08:00 بجے سے رات 10:00 بجے تک</span>
-                            <span id="footer-timings-days" class="urdu-text text-base font-semibold">پیر سے اتوار (7 دن کھلا ہے)</span>
-                        </div>
-                        <div class="p-4 bg-clinic-800/20 rounded-xl text-sm leading-relaxed text-blue-100">
-                            <strong>نوٹ:</strong> ہوم ڈیلیوری اور ایمرجنسی خدمات 24 گھنٹے دستیاب ہیں۔ ہنگامی حالت میں براہ کرم اوپر دیے گئے نمبروں پر بلا جھجھک رابطہ کریں۔
-                        </div>
+                <div class="text-right space-y-4">
+                    <h3 class="urdu-heading text-xl font-bold text-white border-b border-clinic-600 pb-1">کلینک کے اوقات کار (Timings)</h3>
+                    <div class="bg-clinic-800/40 p-4 rounded-xl border border-clinic-800 flex justify-between items-center">
+                        <span id="footer-timings-hours" class="font-bold text-blue-200">صبح 08:00 بجے سے رات 10:00 بجے tank</span>
+                        <span id="footer-timings-days" class="urdu-text text-sm font-semibold">پیر سے اتوار (7 دن کھلا ہے)</span>
                     </div>
                 </div>
 
-                <!-- Address & Interactive Map Button (Right Column) -->
-                <div class="text-right space-y-6">
-                    <h3 class="urdu-heading text-2xl font-bold text-white border-b-2 border-clinic-600 pb-2">
-                        رابطہ اور پتہ (Location & Contact)
-                    </h3>
-                    <div class="space-y-4">
-                        <p id="footer-address-urdu" class="urdu-text text-xl text-white font-extrabold leading-relaxed">
-                            حُسین چوک، 26 روڈ، 90 موڑ، ضلع ساہیوال
-                        </p>
-                        <p id="footer-address-eng" class="text-base text-blue-200 font-semibold tracking-wide">
-                            Hussain Chowk, 26 Road, 90 Morr, District Sahiwal, Punjab, Pakistan.
-                        </p>
-                        
-                        <div class="pt-2">
-                            <a id="footer-map-btn" href="https://maps.app.goo.gl/csmwTE6qm5p8vG2i7" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-clinic-600 hover:bg-clinic-500 text-white font-extrabold text-lg py-4 px-8 rounded-xl shadow-lg transition duration-300">
-                                <!-- Location Icon -->
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
+                <div class="text-right space-y-4">
+                    <h3 class="urdu-heading text-xl font-bold text-white border-b border-clinic-600 pb-1">رابطہ اور پتہ (Location & Contact)</h3>
+                    <div class="space-y-1">
+                        <p id="footer-address-urdu" class="urdu-text text-lg text-white font-bold">حُسین چوک، 26 روڈ، 90 موڑ، ضلع ساہیوال</p>
+                        <p id="footer-address-eng" class="text-xs text-blue-200 font-semibold tracking-wide">Hussain Chowk, 26 Road, 90 Morr, District Sahiwal, Punjab, Pakistan.</p>
+                        <div class="pt-3">
+                            <a id="footer-map-btn" href="https://maps.app.goo.gl/csmwTE6qm5p8vG2i7" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-clinic-600 hover:bg-clinic-500 text-white font-extrabold py-3 px-6 rounded-xl shadow transition">
                                 <span>گوگل میپس پر راستہ دیکھیں</span>
                             </a>
                         </div>
@@ -459,209 +343,95 @@
             </div>
 
             <!-- Footer Bottom & Admin Button -->
-            <div class="pt-8 text-center text-xs sm:text-sm text-clinic-200 space-y-4">
-                <p class="font-medium">
-                    &copy; 2026 المعراج ہیلتھ کیئر ہومیو کلینک۔ جملہ حقوق محفوظ ہیں۔
-                </p>
-                <p class="text-[10px] text-clinic-300">
-                    Registered with National Health Council (NHC) and Punjab Healthcare Commission (PHC)
-                </p>
-                <!-- Admin Access Lock Button -->
-                <button onclick="openLoginModal()" class="inline-flex items-center gap-1.5 text-clinic-400 hover:text-white transition duration-200 border border-clinic-800 hover:border-clinic-500 py-1 px-3 rounded-md text-xs mt-2">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            <div class="pt-6 text-center text-xs text-clinic-200 space-y-3">
+                <p class="font-medium">&copy; 2026 المعراج ہیلتھ کیئر ہومیو کلینک۔ جملہ حقوق محفوظ ہیں۔</p>
+                <button onclick="openLoginModal()" class="inline-flex items-center gap-1 text-clinic-400 hover:text-white transition border border-clinic-800 py-1 px-2 rounded text-[10px]">
                     <span>ایڈمن پینل لاگ ان (Admin Panel)</span>
                 </button>
             </div>
         </div>
     </footer>
 
-    <!-- ==================== ADMIN SYSTEM MODALS & DRAWERS ==================== -->
-
-    <!-- PIN Login Modal -->
-    <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 hidden">
-        <div class="bg-white rounded-2xl p-6 sm:p-8 w-full max-w-sm mx-4 text-center shadow-2xl relative">
-            <h3 class="text-xl font-bold text-clinic-900 mb-4">ایڈمن لاگ ان کریں</h3>
-            <p class="text-sm text-gray-500 mb-6">سیٹنگز کو تبدیل کرنے کے لیے ایڈمن پن کوڈ درج کریں۔ <br><span class="text-xs text-red-500">(ڈیفالٹ پن کوڈ: 1234)</span></p>
-            <input type="password" id="pin-input" placeholder="پن کوڈ درج کریں..." class="w-full text-center tracking-widest border border-gray-300 focus:border-clinic-500 focus:ring-2 focus:ring-clinic-200 p-3 rounded-lg mb-6 outline-none text-lg">
-            <div class="flex gap-3">
-                <button onclick="verifyPin()" class="w-1/2 bg-clinic-900 hover:bg-clinic-800 text-white font-bold py-2.5 rounded-lg transition">لاگ ان</button>
-                <button onclick="closeLoginModal()" class="w-1/2 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2.5 rounded-lg transition">بند کریں</button>
+    <!-- DYNAMIC MOBILE-FIRST STORAGE CONTROL OVERLAYS -->
+    <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 hidden">
+        <div class="bg-white rounded-2xl p-6 w-full max-w-xs mx-4 text-center shadow-xl">
+            <h3 class="text-lg font-bold text-clinic-900 mb-2">ایڈمن لاگ ان کریں</h3>
+            <p class="text-xs text-slate-400 mb-4">فوٹو اور ڈیٹا تبدیل کرنے کا کوڈ درج کریں۔ <br><span class="text-red-500 font-bold">(پن کوڈ: 1234)</span></p>
+            <input type="password" id="pin-input" placeholder="پن درج کریں..." class="w-full text-center border p-2.5 rounded-lg mb-4 text-base tracking-widest outline-none">
+            <div class="flex gap-2">
+                <button onclick="verifyPin()" class="w-1/2 bg-clinic-900 text-white font-bold py-2 rounded-lg text-sm">لاگ ان</button>
+                <button onclick="closeLoginModal()" class="w-1/2 bg-slate-200 text-slate-700 font-bold py-2 rounded-lg text-sm">بند کریں</button>
             </div>
-            <p id="login-error" class="text-sm text-red-500 mt-4 hidden">غلط پن کوڈ! دوبارہ کوشش کریں۔</p>
+            <p id="login-error" class="text-xs text-red-500 mt-2 hidden">غلط پن کوڈ!</p>
         </div>
     </div>
 
-    <!-- Main Admin Panel Overlay Drawer (Full Screen) -->
-    <div id="admin-panel" class="fixed inset-0 z-50 bg-gray-100 overflow-y-auto hidden">
-        <!-- Admin Header -->
-        <header class="bg-clinic-900 text-white sticky top-0 px-6 py-4 flex items-center justify-between shadow-md">
-            <div class="flex items-center gap-3">
-                <span class="text-xl font-bold tracking-wider uppercase">Al-Miraj Clinic Dynamic Admin Control</span>
-            </div>
-            <div class="flex gap-2">
-                <button onclick="exportUpdatedCode()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    ایکسپورٹ ویب سائٹ (Download HTML)
-                </button>
-                <button onclick="saveAllChanges()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-bold text-sm transition">محفوظ کریں</button>
-                <button onclick="closeAdminPanel()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition">باہر نکلیں</button>
+    <div id="admin-panel" class="fixed inset-0 z-50 bg-slate-100 overflow-y-auto hidden">
+        <header class="bg-clinic-900 text-white sticky top-0 px-4 py-3 flex items-center justify-between shadow-md">
+            <span class="text-sm font-bold uppercase">Al-Miraj Mobile Admin Engine</span>
+            <div class="flex gap-1">
+                <button onclick="exportUpdatedCode()" class="bg-emerald-600 text-white px-2.5 py-1.5 rounded font-bold text-xs transition">ڈاؤن لوڈ HTML</button>
+                <button onclick="saveAllChanges()" class="bg-blue-600 text-white px-3 py-1.5 rounded font-bold text-xs transition">محفوظ کریں</button>
+                <button onclick="closeAdminPanel()" class="bg-red-600 text-white px-2 py-1.5 rounded font-bold text-xs transition">بند کریں</button>
             </div>
         </header>
 
-        <!-- Admin Content -->
-        <main class="max-w-4xl mx-auto px-4 py-10 space-y-8 text-right" dir="rtl">
-            <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-900 font-semibold flex items-center gap-3">
-                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                <span>آپ جو بھی تبدیلیاں کریں گے وہ فوری طور پر لوکل براؤزر پر لاگو ہو جائیں گی۔ اپنی تبدیلیوں کو مستقل طور پر محفوظ فائل بنانے کے لیے اوپر دیے گئے "ایکسپورٹ ویب سائٹ" بٹن پر کلک کر کے نئی فائل ڈاؤن لوڈ کر لیں۔</span>
+        <main class="max-w-xl mx-auto px-4 py-6 space-y-6 text-right" dir="rtl">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-xs text-blue-900 font-bold">
+                آپ جو فوٹو یا ڈیٹا یہاں موبائل سے سلیکٹ کریں گے، وہ فوری بدل جائے گا۔ کام ختم کر کے اوپر "ڈاؤن لوڈ HTML" دبا کر نئی فائل گٹ ہب پر اپلوڈ کر دیں۔
             </div>
 
-            <!-- Tab 1: general and Contact Info -->
-            <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-6">
-                <h3 class="text-xl font-bold text-clinic-900 border-b pb-2">1۔ بنیادی معلومات اور رابطہ نمبرز (General Info & Contact)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Block 1: Info Box -->
+            <section class="bg-white rounded-xl p-4 shadow-sm border space-y-4">
+                <h3 class="text-base font-bold text-clinic-900 border-b pb-1">1۔ بنیادی رابطہ معلومات</h3>
+                <div class="space-y-3">
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">کلینک کا نام (اردو)</label>
-                        <input type="text" id="edit-clinic-name-urdu" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">کلینک کا نام (English)</label>
-                        <input type="text" id="edit-clinic-name-eng" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200 text-left" dir="ltr">
+                        <label class="block text-xs font-bold text-slate-600 mb-1">کلینک کا نام (اردو)</label>
+                        <input type="text" id="edit-clinic-name-urdu" class="w-full border p-2 rounded text-sm">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">NHC رجسٹریشن نمبر</label>
-                        <input type="text" id="edit-nhc-reg" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
+                        <label class="block text-xs font-bold text-slate-600 mb-1">ڈاکٹر بابر کا فون نمبر</label>
+                        <input type="text" id="edit-phone-babar" class="w-full border p-2 rounded text-sm text-left" dir="ltr">
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">PHC رجسٹریشن نمبر</label>
-                        <input type="text" id="edit-phc-reg" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">ڈاکٹر بابر کا فون نمبر</label>
-                        <input type="text" id="edit-phone-babar" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200 text-left" dir="ltr">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">ملک عدنان کا فون نمبر</label>
-                        <input type="text" id="edit-phone-adnan" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200 text-left" dir="ltr">
-                    </div>
-                    <div class="md:col-span-2">
-                        <label class="block text-sm font-bold text-gray-700 mb-2">پتہ (اردو)</label>
-                        <input type="text" id="edit-address-urdu" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
-                    </div>
-                    <div class="md:col-span-2">
-                        <label class="block text-sm font-bold text-gray-700 mb-2">پتہ (English)</label>
-                        <input type="text" id="edit-address-eng" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200 text-left" dir="ltr">
-                    </div>
-                    <div class="md:col-span-2">
-                        <label class="block text-sm font-bold text-gray-700 mb-2">گوگل میپس لنک (Google Maps Link)</label>
-                        <input type="text" id="edit-map-url" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200 text-left" dir="ltr">
+                        <label class="block text-xs font-bold text-slate-600 mb-1">ملک عدنان کا فون نمبر</label>
+                        <input type="text" id="edit-phone-adnan" class="w-full border p-2 rounded text-sm text-left" dir="ltr">
                     </div>
                 </div>
             </section>
 
-            <!-- Tab 2: Medical Team -->
-            <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-6">
-                <h3 class="text-xl font-bold text-clinic-900 border-b pb-2">2۔ طبی ٹیم کی معلومات اور تصاویر (Medical Team)</h3>
-                
-                <!-- Doctor edit -->
+            <!-- Block 2: Images Box -->
+            <section class="bg-white rounded-xl p-4 shadow-sm border space-y-4">
+                <h3 class="text-base font-bold text-clinic-900 border-b pb-1">2۔ موبائل گیلری سے فوٹو اپلوڈ کریں</h3>
                 <div class="space-y-4">
-                    <h4 class="text-lg font-bold text-gray-700 border-r-4 border-clinic-600 pr-2">معالج 1: ڈاکٹر بابر حسین ملک</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">ڈاکٹر کا نام (اردو)</label>
-                            <input type="text" id="edit-doc-name" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">کوالٹیفکیشن / ڈگریاں</label>
-                            <input type="text" id="edit-doc-qual" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200 text-left" dir="ltr">
-                        </div>
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">ڈاکٹر کی تصویر تبدیل کریں</label>
-                            <div class="flex items-center gap-4">
-                                <input type="file" id="upload-doc-img" accept="image/*" class="w-full border border-gray-300 p-2 rounded-lg bg-gray-50 cursor-pointer">
-                                <img id="preview-doc-img" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow" src="" alt="preview">
-                            </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">ڈاکٹر صاحب کی تصویر (doctor.jpg)</label>
+                        <div class="flex items-center gap-2">
+                            <input type="file" id="upload-doc-img" accept="image/*" class="w-full border text-xs p-1 rounded bg-slate-50">
+                            <img id="preview-doc-img" class="w-10 h-10 rounded-full object-cover border" src="" alt="preview">
                         </div>
                     </div>
-                </div>
-
-                <hr class="my-6">
-
-                <!-- Tech edit -->
-                <div class="space-y-4">
-                    <h4 class="text-lg font-bold text-gray-700 border-r-4 border-clinic-600 pr-2">معالج 2: ملک محمد عدنان غوری</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">ٹیکنیشن کا نام</label>
-                            <input type="text" id="edit-tech-name" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">ٹیکنیشن عدنان کی تصویر (technician.jpg)</label>
+                        <div class="flex items-center gap-2">
+                            <input type="file" id="upload-tech-img" accept="image/*" class="w-full border text-xs p-1 rounded bg-slate-50">
+                            <img id="preview-tech-img" class="w-10 h-10 rounded-full object-cover border" src="" alt="preview">
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">عہدہ / ٹائٹل</label>
-                            <input type="text" id="edit-tech-title" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
-                        </div>
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">مختصر تعارف / تفصیل</label>
-                            <input type="text" id="edit-tech-desc" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200">
-                        </div>
-                        <div class="md:col-span-2">
-                            <label class="block text-sm font-bold text-gray-700 mb-2">ٹیکنیشن کی تصویر تبدیل کریں</label>
-                            <div class="flex items-center gap-4">
-                                <input type="file" id="upload-tech-img" accept="image/*" class="w-full border border-gray-300 p-2 rounded-lg bg-gray-50 cursor-pointer">
-                                <img id="preview-tech-img" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow" src="" alt="preview">
-                            </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">کلینک کاؤنٹر کی تصویر (clinic.jpg)</label>
+                        <div class="flex items-center gap-2">
+                            <input type="file" id="upload-clinic-img" accept="image/*" class="w-full border text-xs p-1 rounded bg-slate-50">
+                            <img id="preview-clinic-img" class="w-10 h-10 rounded-lg object-cover border" src="" alt="preview">
                         </div>
                     </div>
                 </div>
             </section>
-
-            <!-- Tab 3: Pharmacy, Background & Services -->
-            <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-6">
-                <h3 class="text-xl font-bold text-clinic-900 border-b pb-2">3۔ کلینک گیلری، پس منظر اور تصاویر (Gallery & Background)</h3>
-                
-                <div class="space-y-4">
-                    <h4 class="text-lg font-bold text-gray-700 border-r-4 border-clinic-600 pr-2">بیک گراؤنڈ بورڈ کی تصویر (Hero Signboard Background)</h4>
-                    <div class="grid grid-cols-1 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">بورڈ بیک گراؤنڈ تصویر تبدیل کریں (Real-time Board Photo)</label>
-                            <div class="flex items-center gap-4">
-                                <input type="file" id="upload-hero-bg-img" accept="image/*" class="w-full border border-gray-300 p-2 rounded-lg bg-gray-50 cursor-pointer">
-                                <img id="preview-hero-bg-img" class="w-24 h-16 rounded-lg object-cover border-2 border-gray-200 shadow" src="" alt="preview">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="my-6">
-
-                <div class="space-y-4">
-                    <h4 class="text-lg font-bold text-gray-700 border-r-4 border-clinic-600 pr-2">فارمیسی کاؤنٹر تصویر اور تفصیل</h4>
-                    <div class="grid grid-cols-1 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">فارمیسی کی تفصیل</label>
-                            <textarea id="edit-clinic-desc" rows="4" class="w-full border border-gray-300 p-2.5 rounded-lg outline-none focus:ring-2 focus:ring-clinic-200"></textarea>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">فارمیسی کی تصویر تبدیل کریں</label>
-                            <div class="flex items-center gap-4">
-                                <input type="file" id="upload-clinic-img" accept="image/*" class="w-full border border-gray-300 p-2 rounded-lg bg-gray-50 cursor-pointer">
-                                <img id="preview-clinic-img" class="w-16 h-16 rounded-lg object-cover border-2 border-gray-200 shadow" src="" alt="preview">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Action panel buttons -->
-            <div class="flex flex-col sm:flex-row justify-end gap-4">
-                <button onclick="saveAllChanges()" class="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-base py-3 px-8 rounded-xl shadow-md transition">تبدیلیاں محفوظ کریں</button>
-                <button onclick="resetToDefaults()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-extrabold text-base py-3 px-8 rounded-xl shadow-md transition">ڈیفالٹ پر ری سیٹ کریں</button>
-                <button onclick="closeAdminPanel()" class="bg-red-600 hover:bg-red-700 text-white font-extrabold text-base py-3 px-8 rounded-xl shadow-md transition">پینل بند کریں</button>
-            </div>
         </main>
     </div>
 
-    <!-- JavaScript logic for Admin Panel & Local Persistence -->
+    <!-- Active Local State Synchronization Script -->
     <script>
-        // Default static database matching the exact details
         const defaultDatabase = {
             clinicNameUrdu: "المعراج ہیلتھ کیئر ہومیو کلینک",
             clinicNameEng: "Al-Miraj Clinic & Pharmacy",
@@ -669,33 +439,26 @@
             phcReg: "PHC Reg # 83263",
             heroTitle: "المعراج ہیلتھ کیئر ہومیو کلینک",
             heroLocation: "حُسین چوک، 26 روڈ، 90 موڑ، ضلع ساہیوال",
-            heroDesc: "جدید ہومیو پیتھک علاج اور بنیادی طبی سہولیات کا قابلِ اعتماد مرکز۔ اب آپ کے اپنے علاقے میں بہترین اور مستند معالجین چوبیس گھنٹے آپ کی خدمت کے لیے حاضر ہے۔",
-            heroBgImg: "signboard.jpg", // default path for real-time photo
+            heroDesc: "جدید ہومیو پیتھک علاج اور بنیادی طبی سہولیات کا قابلِ اعتماد مرکز۔ اب آپ کے اپنے علاقے میں بہترین اور مستند معالجین چوبیس گھنٹے آپ کی خدمت کے لیے حاضر ہیں۔",
+            heroBgImg: "signboard.jpg",
             phoneBabar: "0343-6497295",
             phoneAdnan: "0300-4495095",
             addressUrdu: "حُسین چوک، 26 روڈ، 90 موڑ، ضلع ساہیوال",
             addressEng: "Hussain Chowk, 26 Road, 90 Morr, District Sahiwal, Punjab, Pakistan.",
             mapUrl: "https://maps.app.goo.gl/csmwTE6qm5p8vG2i7",
-            
-            // Medical Team
             docName: "ڈاکٹر بابر حسین ملک",
             docQual: "DHMS (Punjab) | RHMP (Pakistan)",
-            docImg: "doctor.jpg", // default path
-            
+            docImg: "doctor.jpg",
             techName: "ملک محمد عدنان غوری",
             techTitle: "Certified Public Health Technician / ڈسپنسر",
             techDesc: "میڈیکل ڈسپنسر اور فرسٹ Aid ایکسپرٹ",
-            techImg: "technician.jpg", // default path
-
-            // Gallery
-            clinicImg: "clinic.jpg", // default path
+            techImg: "technician.jpg",
+            clinicImg: "clinic.jpg",
             clinicDesc: "المعراج ہیلتھ کیئر ہومیو کلینک پر مستند اور اعلیٰ معیار کی ہومیو پیتھک ادویات دستیاب ہیں۔ ہماری دوا ساز فارمیسی میں حفظانِ صحت کے اصولوں کے مطابق ادویات محفوظ کی جاتی ہیں۔"
         };
 
-        // Active State Database
         let appData = {};
 
-        // Load DB on Init
         window.addEventListener('DOMContentLoaded', () => {
             loadAppData();
             setupImageUploadListeners();
@@ -704,20 +467,14 @@
         function loadAppData() {
             const savedData = localStorage.getItem('al_miraj_db');
             if (savedData) {
-                try {
-                    appData = JSON.parse(savedData);
-                } catch (e) {
-                    appData = {...defaultDatabase};
-                }
+                try { appData = JSON.parse(savedData); } catch (e) { appData = {...defaultDatabase}; }
             } else {
                 appData = {...defaultDatabase};
             }
             applyDataToDOM();
         }
 
-        // Render Data on HTML Frontend
         function applyDataToDOM() {
-            // General Info
             document.getElementById('nav-brand-urdu').textContent = appData.clinicNameUrdu;
             document.getElementById('nav-brand-eng').textContent = appData.clinicNameEng;
             document.getElementById('hero-nhc').textContent = appData.nhcReg;
@@ -726,17 +483,6 @@
             document.getElementById('hero-location').textContent = appData.heroLocation;
             document.getElementById('hero-desc').textContent = appData.heroDesc;
 
-            // Apply Hero Section Background Image Dynamically
-            const heroSec = document.getElementById('hero-section');
-            if (heroSec) {
-                if (appData.heroBgImg.startsWith('data:image') || appData.heroBgImg.startsWith('http')) {
-                    heroSec.style.backgroundImage = `url('${appData.heroBgImg}')`;
-                } else {
-                    heroSec.style.backgroundImage = `url('signboard.jpg')`;
-                }
-            }
-
-            // Link updates (clean string from spaces/dashes for tel protocol)
             const cleanBabar = appData.phoneBabar.replace(/[^0-9]/g, '');
             const cleanAdnan = appData.phoneAdnan.replace(/[^0-9]/g, '');
 
@@ -744,7 +490,6 @@
             document.getElementById('hero-call-btn').href = "tel:" + cleanBabar;
             document.getElementById('hero-wa-btn').href = "https://wa.me/92" + cleanBabar;
 
-            // Team Updates
             document.getElementById('hero-doc-label-name').textContent = appData.docName;
             document.getElementById('hero-doc-label-qual').textContent = appData.docQual;
             document.getElementById('team-doc-name').textContent = appData.docName;
@@ -758,53 +503,38 @@
             document.getElementById('team-tech-phone').textContent = appData.phoneAdnan;
             document.getElementById('team-tech-phone-link').href = "tel:" + cleanAdnan;
 
-            // Images Render with fallback logic
             renderImage('hero-doc-img', appData.docImg, 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80');
             renderImage('team-doc-img', appData.docImg, 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80');
             renderImage('team-tech-img', appData.techImg, 'https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&w=600&q=80');
             renderImage('gallery-clinic-img', appData.clinicImg, 'https://images.unsplash.com/photo-1607619056574-7b8d304a2723?auto=format&fit=crop&w=800&q=80');
 
-            // Clinic Gallery & Home Visit
             document.getElementById('gallery-clinic-desc').textContent = appData.clinicDesc;
             document.getElementById('home-visit-babar-text').textContent = appData.phoneBabar;
             document.getElementById('home-visit-adnan-text').textContent = appData.phoneAdnan;
             document.getElementById('home-visit-babar-link').href = "tel:" + cleanBabar;
             document.getElementById('home-visit-adnan-link').href = "tel:" + cleanAdnan;
 
-            // Footer info
             document.getElementById('footer-address-urdu').textContent = appData.addressUrdu;
             document.getElementById('footer-address-eng').textContent = appData.addressEng;
             document.getElementById('footer-map-btn').href = appData.mapUrl;
         }
 
-        // Image Renderer to avoid breaking if file paths are abstract locally
         function renderImage(elementId, imgSource, fallbackUrl) {
             const el = document.getElementById(elementId);
             if (!el) return;
-            // If image is standard base64 or custom URL
-            if (imgSource.startsWith('data:image') || imgSource.startsWith('http')) {
-                el.src = imgSource;
-            } else {
-                // If standard static file link, let it load with onerror backup intact
-                el.src = imgSource;
-            }
+            el.src = (imgSource.startsWith('data:image') || imgSource.startsWith('http')) ? imgSource : fallbackUrl;
         }
 
-        // ADMIN PANEL VISIBILITY LOGIC
         function openLoginModal() {
             document.getElementById('login-modal').classList.remove('hidden');
             document.getElementById('pin-input').value = '';
             document.getElementById('login-error').classList.add('hidden');
-            document.getElementById('pin-input').focus();
         }
 
-        function closeLoginModal() {
-            document.getElementById('login-modal').classList.add('hidden');
-        }
+        function closeLoginModal() { document.getElementById('login-modal').classList.add('hidden'); }
 
         function verifyPin() {
-            const pinVal = document.getElementById('pin-input').value;
-            if (pinVal === '1234') {
+            if (document.getElementById('pin-input').value === '1234') {
                 closeLoginModal();
                 openAdminPanel();
             } else {
@@ -814,39 +544,16 @@
 
         function openAdminPanel() {
             document.getElementById('admin-panel').classList.remove('hidden');
-            // Populate Input fields with current active state
             document.getElementById('edit-clinic-name-urdu').value = appData.clinicNameUrdu;
-            document.getElementById('edit-clinic-name-eng').value = appData.clinicNameEng;
-            document.getElementById('edit-nhc-reg').value = appData.nhcReg;
-            document.getElementById('edit-phc-reg').value = appData.phcReg;
             document.getElementById('edit-phone-babar').value = appData.phoneBabar;
             document.getElementById('edit-phone-adnan').value = appData.phoneAdnan;
-            document.getElementById('edit-address-urdu').value = appData.addressUrdu;
-            document.getElementById('edit-address-eng').value = appData.addressEng;
-            document.getElementById('edit-map-url').value = appData.mapUrl;
-
-            // Doctor details populate
-            document.getElementById('edit-doc-name').value = appData.docName;
-            document.getElementById('edit-doc-qual').value = appData.docQual;
-            document.getElementById('preview-doc-img').src = appData.docImg.startsWith('data:') ? appData.docImg : 'doctor.jpg';
-
-            // Tech details populate
-            document.getElementById('edit-tech-name').value = appData.techName;
-            document.getElementById('edit-tech-title').value = appData.techTitle;
-            document.getElementById('edit-tech-desc').value = appData.techDesc;
-            document.getElementById('preview-tech-img').src = appData.techImg.startsWith('data:') ? appData.techImg : 'technician.jpg';
-
-            // Background & Pharmacy details populate
-            document.getElementById('preview-hero-bg-img').src = appData.heroBgImg.startsWith('data:') ? appData.heroBgImg : 'signboard.jpg';
-            document.getElementById('edit-clinic-desc').value = appData.clinicDesc;
-            document.getElementById('preview-clinic-img').src = appData.clinicImg.startsWith('data:') ? appData.clinicImg : 'clinic.jpg';
+            document.getElementById('preview-doc-img').src = appData.docImg.startsWith('data:') ? appData.docImg : '';
+            document.getElementById('preview-tech-img').src = appData.techImg.startsWith('data:') ? appData.techImg : '';
+            document.getElementById('preview-clinic-img').src = appData.clinicImg.startsWith('data:') ? appData.clinicImg : '';
         }
 
-        function closeAdminPanel() {
-            document.getElementById('admin-panel').classList.add('hidden');
-        }
+        function closeAdminPanel() { document.getElementById('admin-panel').classList.add('hidden'); }
 
-        // File Uploader Base64 conversion
         function setupImageUploadListeners() {
             const handleUpload = (inputEl, previewElId, configKey) => {
                 inputEl.addEventListener('change', (e) => {
@@ -854,75 +561,36 @@
                     if (file) {
                         const reader = new FileReader();
                         reader.onload = function(evt) {
-                            appData[configKey] = evt.target.result; // Store as base64
+                            appData[configKey] = evt.target.result;
                             document.getElementById(previewElId).src = evt.target.result;
                         }
                         reader.readAsDataURL(file);
                     }
                 });
             };
-
             handleUpload(document.getElementById('upload-doc-img'), 'preview-doc-img', 'docImg');
             handleUpload(document.getElementById('upload-tech-img'), 'preview-tech-img', 'techImg');
-            handleUpload(document.getElementById('upload-hero-bg-img'), 'preview-hero-bg-img', 'heroBgImg');
             handleUpload(document.getElementById('upload-clinic-img'), 'preview-clinic-img', 'clinicImg');
         }
 
-        // Save admin changes to storage
         function saveAllChanges() {
             appData.clinicNameUrdu = document.getElementById('edit-clinic-name-urdu').value;
-            appData.clinicNameEng = document.getElementById('edit-clinic-name-eng').value;
-            appData.nhcReg = document.getElementById('edit-nhc-reg').value;
-            appData.phcReg = document.getElementById('edit-phc-reg').value;
-            appData.heroTitle = document.getElementById('edit-clinic-name-urdu').value; // Sync with hero title
-            appData.heroLocation = document.getElementById('edit-address-urdu').value; // Sync location
+            appData.heroTitle = document.getElementById('edit-clinic-name-urdu').value;
             appData.phoneBabar = document.getElementById('edit-phone-babar').value;
             appData.phoneAdnan = document.getElementById('edit-phone-adnan').value;
-            appData.addressUrdu = document.getElementById('edit-address-urdu').value;
-            appData.addressEng = document.getElementById('edit-address-eng').value;
-            appData.mapUrl = document.getElementById('edit-map-url').value;
-
-            // Doctor Save
-            appData.docName = document.getElementById('edit-doc-name').value;
-            appData.docQual = document.getElementById('edit-doc-qual').value;
-
-            // Tech Save
-            appData.techName = document.getElementById('edit-tech-name').value;
-            appData.techTitle = document.getElementById('edit-tech-title').value;
-            appData.techDesc = document.getElementById('edit-tech-desc').value;
-
-            // Clinic Desc Save
-            appData.clinicDesc = document.getElementById('edit-clinic-desc').value;
 
             localStorage.setItem('al_miraj_db', JSON.stringify(appData));
             applyDataToDOM();
-            alert("مبارک ہو! تمام تبدیلیاں محفوظ کر دی گئی ہیں۔");
+            alert("تبدیلیاں لوکل براؤزر پر محفوظ ہو گئیں۔ مستقل سیو کرنے کے لیے ڈاؤن لوڈ بٹن دبائیں۔");
             closeAdminPanel();
         }
 
-        // Reset system database to static originals
-        function resetToDefaults() {
-            if (confirm("کیا آپ واقعی تمام ترتیبات کو اصل (ڈیفالٹ) پر واپس لانا چاہتے ہیں؟ آپ کا اپلوڈ کردہ ڈیٹا ختم ہو جائے گا۔")) {
-                localStorage.removeItem('al_miraj_db');
-                loadAppData();
-                closeAdminPanel();
-                alert("تمام معلومات ڈیفالٹ پر ری سیٹ کر دی گئی ہیں۔");
-            }
-        }
-
-        // Dynamic Export Engine - Downloads the whole html file with your edits pre-applied!
         function exportUpdatedCode() {
-            // Get original document outerHTML
             let docContent = document.documentElement.outerHTML;
-            
-            // Serialize the current active appData directly into the defaultDatabase object block of the new file
             const activeDataJSON = JSON.stringify(appData, null, 4);
-            const dataReplacementRegex = /const defaultDatabase = \{[\s\S]*?\};/;
+            docContent = docContent.replace(/let appData = \{[\s\S]*?\};/, `let appData = {};`);
+            docContent = docContent.replace(/const defaultDatabase = \{[\s\S]*?\};/, `const defaultDatabase = ${activeDataJSON};`);
             
-            // Apply current settings as defaults inside the downloaded code
-            docContent = docContent.replace(dataReplacementRegex, `const defaultDatabase = ${activeDataJSON};`);
-            
-            // Download process trigger
             const blob = new Blob([`<!DOCTYPE html>\n` + docContent], { type: "text/html;charset=utf-8" });
             const link = document.createElement("a");
             link.href = URL.createObjectURL(blob);
